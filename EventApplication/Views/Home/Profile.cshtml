@@ -1,0 +1,18 @@
+﻿@using EventApplication.ViewModels
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container mt-5">
+    <div class="row justify-content-center align-align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-8">
+            <div class="main">
+                <h1 class="home">Welcome to EventPlanner</h1>
+                <p class="home">@Model.FirstName</p>
+                <p class="home">@Model.LastName</p>
+                <p class="home">@Model.Email</p>
+                <p class="home">@Model.DOB</p>
+            </div>
+        </div>
+    </div>
+</div>

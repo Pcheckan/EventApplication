@@ -1,0 +1,117 @@
+﻿@model EventApplication.ViewModels.UsersVM
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Register</h1>
+
+            @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <!--First Name-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.FirstName">First Name</label>
+                    <input type="text" asp-for="@Model.FirstName" class="form-control" /> 
+                </div>
+                <!--Last Name-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.LastName">Last Name</label>
+                    <input type="text" asp-for="@Model.LastName" class="form-control" /> 
+                </div>
+                <!--Gender-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Gender">Gender</label>
+                    <input type="text" asp-for="@Model.Gender" class="form-control" /> 
+                </div>
+                <!--State-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.State">State</label>
+                    <input type="text" asp-for="@Model.State" class="form-control" /> 
+                </div>
+                <!--Phone Number-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.PhoneNumber">Phone Number</label>
+                    <input type="text" asp-for="@Model.PhoneNumber" class="form-control" /> 
+                </div>
+                <!--Date of Birth-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.DOB">Date of Birth</label>
+                    <input type="text" asp-for="@Model.DOB" type="date" class="form-control" /> 
+                </div>
+                <!--Interest One-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Interest1">Interest One</label>
+                    <select id="Interest1" asp-for="@Model.Interest1" class="form-control">
+                        <option value="Air">Air Sports</option>
+                        <option value="Land">Outdoors</option>
+                        <option value="Sports">Team Sports</option>
+                        <option value="Exercise">Exercise</option>
+                        <option value="Snowsports">Snowsports</option>
+                        <option value="Relaxing">Relaxation</option>
+                        <option value="Motorsports">Motorsports</option>
+                        <option value="Watersports">WaterSports</option>
+                    </select> 
+                </div>
+                <!--Interest Two-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Interest2">Interest Two</label>
+                    <select id="Interest2" asp-for="@Model.Interest2" class="form-control">
+                        <option value="Air">Air Sports</option>
+                        <option value="Land">Outdoors</option>
+                        <option value="Sports">Team Sports</option>
+                        <option value="Exercise">Exercise</option>
+                        <option value="Snowsports">Snowsports</option>
+                        <option value="Relaxing">Relaxation</option>
+                        <option value="Motorsports">Motorsports</option>
+                        <option value="Watersports">WaterSports</option>
+                    </select> 
+                </div>
+
+                <!--Interest Three-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Interest3">Interest Three</label>
+                    <select id="Interest3" asp-for="@Model.Interest3" class="form-control">
+                        <option value="Air">Air Sports</option>
+                        <option value="Land">Outdoors</option>
+                        <option value="Sports">Team Sports</option>
+                        <option value="Exercise">Exercise</option>
+                        <option value="Snowsports">Snowsports</option>
+                        <option value="Relaxing">Relaxation</option>
+                        <option value="Motorsports">Motorsports</option>
+                        <option value="Watersports">WaterSports</option>
+                    </select>
+
+                    <span asp-validation-for="@Model.Interest3" class="text-danger"></span>
+                </div>
+
+                <!--Email-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Email">Email</label>
+                    <input type="text" asp-for="@Model.Email" class="form-control" /> 
+                </div>
+
+                <!--Date of Birth-->
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Password">Password</label>
+                    <input type="password" asp-for="@Model.Password" class="form-control" /> 
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.ConfirmPassword">Confirm Password</label>
+                    <input type="password" asp-for="@Model.ConfirmPassword" class="form-control" /> 
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            }
+            </div>
+    </div>
+</div>
