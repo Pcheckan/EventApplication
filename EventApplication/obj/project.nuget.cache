@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5FxYPPjBA7hs4l41GEdMVE4V1gSX2CbkrDnSWwoi23bLHN7LoP4cdvY1rzYRq6xUA1B/nbPUpYFHbv7snuz9ZQ==",
+  "dgSpecHash": "WyHq95dUawTzNDWzhqosJGkMvB/qTey0I+bmkyYtKLyI82EsO3//5nqGdfByMmjhWvM6MopPV5h2Wl9Rran02Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Preston\\Desktop\\EventApplication\\EventApplication\\EventApplication\\EventApplication.csproj",
+  "projectFilePath": "D:\\WebApp\\WebApp\\EventApplication\\EventApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Preston\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Preston\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

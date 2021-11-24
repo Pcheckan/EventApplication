@@ -55,7 +55,10 @@ namespace EventApplication.Controllers
                         Id = usersdetails.Id,
                         Email = usersdetails.Email,
                         FirstName = usersdetails.FirstName,
-                        LastName = usersdetails.LastName
+                        LastName = usersdetails.LastName,
+                        Interest1 = usersdetails.Interest1,
+                        Interest2 = usersdetails.Interest2,
+                        Interest3 = usersdetails.Interest3
                     };
                     _session.SetString("AuthCertificate", JsonConvert.SerializeObject(newLoginCred));
 
