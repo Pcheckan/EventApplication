@@ -13,15 +13,7 @@
               "Category"
             };
 }
-<div class="container mt-5">
-    <div class="row justify-content-center align-align-items-center">
-        <div class="col-sm-12 col-md-12 col-lg-4">
-            <p><strong>Interest 1: @Model.Interest1</strong></p>
-            <p><strong>Interest 2: @Model.Interest2</strong></p>
-            <p><strong>Interest 3: @Model.Interest3</strong></p>
-        </div>
-    </div>
-</div>
+
 <div class = "table row justify-content-center align-align-items-center ">
     <table class="table table-bordered table-hover">
         <thead>
@@ -41,14 +33,12 @@
             @{
             if (Model != null){
                 foreach (var Data in Model){
-                <tr>
-                    <td>@Data.Id</td>
+                <tr>    
                     <td>@Data.Name</td>
                     <td>@Data.Location</td>
                     <td>@Data.Time</td>
                     <td>@Data.Date</td>
                     <td>@Data.Status</td>
-                    <td>@Data.Attendees</td>
                     <td>@Data.Category</td>
 
                 </tr>
