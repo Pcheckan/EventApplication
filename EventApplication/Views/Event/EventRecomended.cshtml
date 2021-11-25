@@ -26,24 +26,39 @@
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                    @{
+                @{
                         foreach(var head in TableHeaders)
                         {
-                            <th>
-                                @head
-                            </th>
+                    <th>
+                        @head
+                    </th>
                         }
-                    }
+                }
             </tr>
         </thead>
-        @{
-            if (Model != null)
-            {
+
+        <tbody>
+            @{
+            if (Model != null){
+                foreach (var Data in Model){
                 <tr>
-                    <td></td>
-                </tr>          
+                    <td>@Data.Id</td>
+                    <td>@Data.Name</td>
+                    <td>@Data.Location</td>
+                    <td>@Data.Time</td>
+                    <td>@Data.Date</td>
+                    <td>@Data.Status</td>
+                    <td>@Data.Attendees</td>
+                    <td>@Data.Category</td>
+
+                </tr>
+                }
             }
-        }
+
+
+
+            }
+        </tbody>
 
     </table>
 </div>
