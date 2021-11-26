@@ -1,25 +1,80 @@
-﻿
+﻿@using EventApplication.ViewModels
 @{
     ViewData["Title"] = "EventSearch";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+        string[] TableHeaders = new string[]
+            {
+              "Name",
+              "Location",
+              "Time",
+              "Date",
+              "Status",
+              "Category"
+            };
 }
 
 
+<!--Container for search bar-->
 <div class="container mt-5">
     <div class="row justify-content-center align-align-items-center">
         <div class="col-sm-12 col-md-12 col-lg-4">
-            <form method="get">
-                <div class="input-group">
-                    <input class="form-control" placeholder="Search..." form="SearchTerm" />
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit">
-                            Search
-                        </button>
-                    </div>
+                <div class="mb-3">
+                    <label class="form-label">Interest One</label>
+                    <select id="Interest1"class="form-control" form="SearchTerm">
+                        <option value="Air">Air Sports</option>
+                        <option value="Land">Outdoors</option>
+                        <option value="Sports">Team Sports</option>
+                        <option value="Exercise">Exercise</option>
+                        <option value="Snowsports">Snowsports</option>
+                        <option value="Relaxing">Relaxation</option>
+                        <option value="Motorsports">Motorsports</option>
+                        <option value="Watersports">WaterSports</option>
+                        <option value ="Programming">Programming</option>
+                    </select> 
                 </div>
-            </form>
+                <div class="mb-3">
+                    <button type="submit" asp-controller="Event" asp-action="EventSearch" class="btn btn-primary">Search</button>
+                </div>
         </div>
     </div>
 </div>
 
+<!--Container for data table-->
+<div class = "table row justify-content-center align-align-items-center ">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                @{
+                        foreach(var head in TableHeaders)
+                        {
+                            <th>
+                                @head
+                            </th>
+                        }
+                }
+            </tr>
+        </thead>
 
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (var Data in Model)
+                    {
+                        <tr>    
+                            <td>@Data.Name</td>
+                            <td>@Data.Location</td>
+                            <td>@Data.Time</td>
+                            <td>@Data.Date</td>
+                            <td>@Data.Status</td>
+                            <td>@Data.Category</td>
+
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+
+    </table>
+</div>
