@@ -1753,3 +1753,4 @@ C:\Users\bramd\source\repos\EventApplication\EventApplication\obj\Debug\net5.0\E
 C:\Users\bramd\source\repos\EventApplication\EventApplication\obj\Debug\net5.0\ref\EventApplication.dll
 C:\Users\bramd\source\repos\EventApplication\EventApplication\obj\Debug\net5.0\EventApplication.pdb
 C:\Users\bramd\source\repos\EventApplication\EventApplication\obj\Debug\net5.0\EventApplication.genruntimeconfig.cache
+D:\WebApp\WebApp\EventApplication\obj\Debug\net5.0\Razor\Views\Event\EventCreate.cshtml.g.cs

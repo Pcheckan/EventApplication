@@ -88,6 +88,12 @@ namespace EventApplication.Controllers
         {
             return View();
         }
+
+        public IActionResult EventCreate()
+        {
+            return View();
+        }
+
         public void RecommendEvents(Users data)
         {
  
