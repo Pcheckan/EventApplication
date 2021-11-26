@@ -98,5 +98,15 @@ namespace EventApplication.Controllers
         {
  
         }
+
+        public void GoToEvent()
+        {
+            RedirectToAction("Index", "Login");
+        }
+
+        public IActionResult ProgrammingEvent()
+        {
+            return View();
+        }
     }
 }

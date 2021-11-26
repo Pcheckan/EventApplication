@@ -10,7 +10,8 @@
               "Time",
               "Date",
               "Status",
-              "Category"
+              "Category",
+              "Attend"
             };
 }
 
@@ -40,7 +41,9 @@
                     <td>@Data.Date</td>
                     <td>@Data.Status</td>
                     <td>@Data.Category</td>
-
+                    <td>
+                        <a asp-area="" asp-controller="Event" asp-action="ProgrammingEvent" class="btn btn-primary">Attend</a>
+                    </td>
                 </tr>
                 }
             }
