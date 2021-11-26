@@ -70,7 +70,7 @@ namespace EventApplication.Controllers
                         Location=dr["Location"].ToString(),
                         Time=dr["Time"].ToString(),
                         Date=dr["Date"].ToString(),
-                        Status=dr["Status"].ToString(),
+                       Status=dr["Status"].ToString(),
                         Category=dr["Category"].ToString(),
 
 
@@ -91,7 +91,7 @@ namespace EventApplication.Controllers
         }
         public void RecommendEvents(Users data)
         {
-
+ 
         }
     }
 }

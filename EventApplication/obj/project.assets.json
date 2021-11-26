@@ -7349,23 +7349,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Preston\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\bramd\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WebApp\\WebApp\\EventApplication\\EventApplication.csproj",
+      "projectUniqueName": "C:\\Users\\bramd\\source\\repos\\EventApplication\\EventApplication\\EventApplication.csproj",
       "projectName": "EventApplication",
-      "projectPath": "D:\\WebApp\\WebApp\\EventApplication\\EventApplication.csproj",
-      "packagesPath": "C:\\Users\\Preston\\.nuget\\packages\\",
-      "outputPath": "D:\\WebApp\\WebApp\\EventApplication\\obj\\",
+      "projectPath": "C:\\Users\\bramd\\source\\repos\\EventApplication\\EventApplication\\EventApplication.csproj",
+      "packagesPath": "C:\\Users\\bramd\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bramd\\source\\repos\\EventApplication\\EventApplication\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Preston\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bramd\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7432,6 +7428,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.12, 5.0.12]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

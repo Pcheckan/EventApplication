@@ -23,16 +23,17 @@
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                    @{
+                @{
                         foreach(var head in TableHeaders)
                         {
-                            <th>
-                                @head
-                            </th>
+                    <th>
+                        @head
+                    </th>
                         }
-                    }
+                }
             </tr>
         </thead>
+<<<<<<< HEAD
         @{
             if (Model != null)
             {
@@ -47,8 +48,31 @@
                         <td>@Data.Category</td>
                     </tr>
                 }
+=======
+
+        <tbody>
+            @{
+            if (Model != null){
+                foreach (var Data in Model){
+                <tr>
+                    <td>@Data.Id</td>
+                    <td>@Data.Name</td>
+                    <td>@Data.Location</td>
+                    <td>@Data.Time</td>
+                    <td>@Data.Date</td>
+                    <td>@Data.Status</td>
+                    <td>@Data.Attendees</td>
+                    <td>@Data.Category</td>
+
+                </tr>
+                }
             }
-        }
+
+
+
+>>>>>>> 0a548852671463c4f5a0b78f49755bbe626d663c
+            }
+        </tbody>
 
     </table>
 </div>
