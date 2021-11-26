@@ -19,6 +19,7 @@ namespace EventApplication.Controllers
         SqlDataReader dr;
 
         List<Events> events = new List<Events>();
+        List<Events> searchEvents = new List<Events>();
 
         private UsersInterfaces _usersInterfaces;
         private readonly IHttpContextAccessor _httpContextAccessor;
@@ -84,9 +85,46 @@ namespace EventApplication.Controllers
             }
         }
 
+
+
+        // Event Search functionality
+        public string SearchTerm { get; set; }
+        private void searchData()
+        {
+            try
+            {
+                con.Open();
+                command.Connection = con;
+                command.CommandText = "SELECT TOP (1000) [Name],[Location],[Time],[Date],[Status],[Category] FROM [dbo].[Events] WHERE Category ='" + SearchTerm + "'";
+                dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    searchEvents.Add(new Events()
+                    {
+                        Name = dr["Name"].ToString(),
+                        Location = dr["Location"].ToString(),
+                        Time = dr["Time"].ToString(),
+                        Date = dr["Date"].ToString(),
+                        Status = dr["Status"].ToString(),
+                        Category = dr["Category"].ToString(),
+
+
+                    });
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public IActionResult EventSearch()
         {
-            return View();
+            con.ConnectionString = "Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-DB;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#";
+            searchData();
+            return View(searchEvents);
         }
 
         public IActionResult EventCreate()
