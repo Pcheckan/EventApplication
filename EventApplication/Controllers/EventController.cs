@@ -46,6 +46,10 @@ namespace EventApplication.Controllers
                 con.ConnectionString = "Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-DB;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#";
 
                 FetchData();
+<<<<<<< HEAD
+                // Return the events model to the page to access the information
+=======
+>>>>>>> 9467bb0da9d8ad7ad6d14f960c42042c046bc05e
                 return View(events);
             }
             else
