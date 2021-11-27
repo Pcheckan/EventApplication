@@ -1,4 +1,5 @@
-﻿@*
+﻿@model EventApplication.ViewModels.EventsVM
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -10,33 +11,48 @@
     <div class="row justify-content-center align-align-items-center">
         <div class="col-sm-12 col-md-12 col-lg-4">
             <h1 class="mb-3">Create Event</h1>
-            <label class="form-label">Name of Event:</label>
-            <input type="text" class="form-control" form="Event" />
-            <label class="form-label">Location of Event:</label>
-            <input type="text" class="form-control" form="Location" />
-            <label class="form-label">Time of Event:</label>
-            <input type="text" class="form-control" form="Time" />
-            <label class="form-label">Date of Event:</label>
-            <input type="text" class="form-control" form="Date" />
-            <label class="form-label">Status of Event:</label>
-            <input type="text" class="form-control" form="Status" />
-            <label class="form-label">Attendees Number</label>
-            <input type="text" class="form-control" form="Attendees" />
-            <label class="form-label">Category of Event</label>
-            <select id="Interest1" class="form-control" form="Category">
-                <option value="Air">Air Sports</option>
-                <option value="Land">Outdoors</option>
-                <option value="Sports">Team Sports</option>
-                <option value="Exercise">Exercise</option>
-                <option value="Snow Sports">Snowsports</option>
-                <option value="Relaxing">Relaxation</option>
-                <option value="Motorsports">Motorsports</option>
-                <option value="Water Sports">Watersports</option>
-                <option value="Programming">Programming</option>
-            </select>
-        </div>
-        <div class="ab-3">
-            <button type="submit" class="btn btn-primary">Submit Event</button>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Name">Event Name</label>
+                    <input type="text" asp-for="@Model.Name" class="form-control" />
+                    <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Location">Event Location</label>
+                    <input type="text" asp-for="@Model.Location" class="form-control" />
+                    <span asp-validation-for="@Model.Location" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Time">Time of Event</label>
+                    <input type="time" asp-for="@Model.Time" class="form-control" />
+                    <span asp-validation-for="@Model.Time" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Date">Date of Event</label>
+                    <input type="date" asp-for="@Model.Date" class="form-control" />
+                    <span asp-validation-for="@Model.Date" class="text-danger"></span>
+                </div>
+                 <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Category">Category</label>
+                    <select id="Category" asp-for="@Model.Category" class="form-control">
+                        <option value="Air">Air Sports</option>
+                        <option value="Land">Outdoors</option>
+                        <option value="Sports">Team Sports</option>
+                        <option value="Exercise">Exercise</option>
+                        <option value="Snowsports">Snowsports</option>
+                        <option value="Relaxing">Relaxation</option>
+                        <option value="Motorsports">Motorsports</option>
+                        <option value="Watersports">WaterSports</option>
+                        <option value="Computers">Computers</option>
+                    </select> 
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            }
             </div>
         </div>
     </div>

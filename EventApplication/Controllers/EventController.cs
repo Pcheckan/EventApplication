@@ -146,5 +146,12 @@ namespace EventApplication.Controllers
         {
             return View();
         }
+        public void MakeNewEvent()
+        {
+            con.ConnectionString = "Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-DB;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#";
+            SqlCommand insert = new SqlCommand("EXEC dbo.CreateNewEvent @Name, @Location, @Time, @Date, @Status, @Category", con);
+            insert.Parameters.AddWithValue("@Name", ViewData["Name"]);
+
+        }
     }
 }
