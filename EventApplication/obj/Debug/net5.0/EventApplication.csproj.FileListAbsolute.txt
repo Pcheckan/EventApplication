@@ -2197,3 +2197,4 @@ D:\WebApp\WebApp\EventApplication\obj\Debug\net5.0\EventApplication.dll
 D:\WebApp\WebApp\EventApplication\obj\Debug\net5.0\ref\EventApplication.dll
 D:\WebApp\WebApp\EventApplication\obj\Debug\net5.0\EventApplication.pdb
 D:\WebApp\WebApp\EventApplication\obj\Debug\net5.0\EventApplication.genruntimeconfig.cache
+D:\WebApp\WebApp\EventApplication\obj\Debug\net5.0\EventApplication.csproj.AssemblyReference.cache
