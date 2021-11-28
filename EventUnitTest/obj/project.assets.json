@@ -10253,19 +10253,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bramd\\.nuget\\packages\\": {}
+    "C:\\Users\\Preston\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bramd\\Source\\Repos\\EventApplication\\EventUnitTest\\EventUnitTest.csproj",
+      "projectUniqueName": "D:\\WebApp\\WebApp\\EventUnitTest\\EventUnitTest.csproj",
       "projectName": "EventUnitTest",
-      "projectPath": "C:\\Users\\bramd\\Source\\Repos\\EventApplication\\EventUnitTest\\EventUnitTest.csproj",
-      "packagesPath": "C:\\Users\\bramd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bramd\\Source\\Repos\\EventApplication\\EventUnitTest\\obj\\",
+      "projectPath": "D:\\WebApp\\WebApp\\EventUnitTest\\EventUnitTest.csproj",
+      "packagesPath": "C:\\Users\\Preston\\.nuget\\packages\\",
+      "outputPath": "D:\\WebApp\\WebApp\\EventUnitTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\bramd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Preston\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10279,8 +10283,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\bramd\\Source\\Repos\\EventApplication\\EventApplication\\EventApplication.csproj": {
-              "projectPath": "C:\\Users\\bramd\\Source\\Repos\\EventApplication\\EventApplication\\EventApplication.csproj"
+            "D:\\WebApp\\WebApp\\EventApplication\\EventApplication.csproj": {
+              "projectPath": "D:\\WebApp\\WebApp\\EventApplication\\EventApplication.csproj"
             }
           }
         }
