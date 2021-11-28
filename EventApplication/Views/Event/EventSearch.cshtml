@@ -16,29 +16,31 @@
 
 
 <!--Container for search bar-->
-<div class="container mt-5">
-    <div class="row justify-content-center align-align-items-center">
-        <div class="col-sm-12 col-md-12 col-lg-4">
-                <div class="mb-3">
-                    <label class="form-label">Interest One</label>
-                    <select id="Interest1"class="form-control" form="SearchTerm">
-                        <option value="Air">Air Sports</option>
-                        <option value="Land">Outdoors</option>
-                        <option value="Sports">Team Sports</option>
-                        <option value="Exercise">Exercise</option>
-                        <option value="Snowsports">Snowsports</option>
-                        <option value="Relaxing">Relaxation</option>
-                        <option value="Motorsports">Motorsports</option>
-                        <option value="Watersports">WaterSports</option>
-                        <option value ="Computers">Computers</option>
-                    </select> 
-                </div>
-                <div class="mb-3">
-                        <a asp-area="" asp-controller="Event" asp-action="EventSearch" class="btn btn-primary">Attend</a>
-                </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center align-align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="mb-3">
+                        <h1 class="row justify-content-center align-align-items-center">Events</h1>
+                        <select id="Interest1"class="form-control" form="SearchTerm">
+                            <option value="Air">Air Sports</option>
+                            <option value="Land">Outdoors</option>
+                            <option value="Sports">Team Sports</option>
+                            <option value="Exercise">Exercise</option>
+                            <option value="Snowsports">Snowsports</option>
+                            <option value="Relaxing">Relaxation</option>
+                            <option value="Motorsports">Motorsports</option>
+                            <option value="Watersports">WaterSports</option>
+                            <option value ="Computers">Computers</option>
+                        </select> 
+                    </div>
+                    <div class="mb-3">
+                            <a asp-area="" asp-controller="Event" asp-action="EventSearch" class="btn btn-primary">Search</a>
+                    </div>
+            </div>
         </div>
     </div>
-</div>
+
 
 <!--Container for data table-->
 <div class = "table row justify-content-center align-align-items-center ">
@@ -55,7 +57,7 @@
                 }
             </tr>
         </thead>
-
+    
         <tbody>
             @{
                 if (Model != null)
@@ -75,6 +77,7 @@
                 }
             }
         </tbody>
+        
 
     </table>
 </div>

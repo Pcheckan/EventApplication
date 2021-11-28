@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WebApp\\WebApp\\InterestUnitTest3\\InterestUnitTest3.csproj": {}
+    "C:\\Users\\Ronny\\source\\repos\\EventApplication\\InterestUnitTest3\\InterestUnitTest3.csproj": {}
   },
   "projects": {
-    "D:\\WebApp\\WebApp\\EventApplication\\EventApplication.csproj": {
+    "C:\\Users\\Ronny\\source\\repos\\EventApplication\\EventApplication\\EventApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WebApp\\WebApp\\EventApplication\\EventApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Ronny\\source\\repos\\EventApplication\\EventApplication\\EventApplication.csproj",
         "projectName": "EventApplication",
-        "projectPath": "D:\\WebApp\\WebApp\\EventApplication\\EventApplication.csproj",
-        "packagesPath": "C:\\Users\\Preston\\.nuget\\packages\\",
-        "outputPath": "D:\\WebApp\\WebApp\\EventApplication\\obj\\",
+        "projectPath": "C:\\Users\\Ronny\\source\\repos\\EventApplication\\EventApplication\\EventApplication.csproj",
+        "packagesPath": "C:\\Users\\Ronny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ronny\\source\\repos\\EventApplication\\EventApplication\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Preston\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ronny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,20 +93,17 @@
         }
       }
     },
-    "D:\\WebApp\\WebApp\\InterestUnitTest3\\InterestUnitTest3.csproj": {
+    "C:\\Users\\Ronny\\source\\repos\\EventApplication\\InterestUnitTest3\\InterestUnitTest3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WebApp\\WebApp\\InterestUnitTest3\\InterestUnitTest3.csproj",
+        "projectUniqueName": "C:\\Users\\Ronny\\source\\repos\\EventApplication\\InterestUnitTest3\\InterestUnitTest3.csproj",
         "projectName": "InterestUnitTest3",
-        "projectPath": "D:\\WebApp\\WebApp\\InterestUnitTest3\\InterestUnitTest3.csproj",
-        "packagesPath": "C:\\Users\\Preston\\.nuget\\packages\\",
-        "outputPath": "D:\\WebApp\\WebApp\\InterestUnitTest3\\obj\\",
+        "projectPath": "C:\\Users\\Ronny\\source\\repos\\EventApplication\\InterestUnitTest3\\InterestUnitTest3.csproj",
+        "packagesPath": "C:\\Users\\Ronny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ronny\\source\\repos\\EventApplication\\InterestUnitTest3\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Preston\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ronny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -123,8 +117,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\WebApp\\WebApp\\EventApplication\\EventApplication.csproj": {
-                "projectPath": "D:\\WebApp\\WebApp\\EventApplication\\EventApplication.csproj"
+              "C:\\Users\\Ronny\\source\\repos\\EventApplication\\EventApplication\\EventApplication.csproj": {
+                "projectPath": "C:\\Users\\Ronny\\source\\repos\\EventApplication\\EventApplication\\EventApplication.csproj"
               }
             }
           }
