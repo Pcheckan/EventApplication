@@ -120,6 +120,7 @@ namespace EventApplication.Controllers
             }
         }
 
+        // Function for searching the database for certain events
         public IActionResult EventSearch()
         {
             con.ConnectionString = "Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-DB;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#";
@@ -146,11 +147,18 @@ namespace EventApplication.Controllers
         {
             return View();
         }
+
+        // Function for creating a new event and inserting into sql database
         public void MakeNewEvent()
         {
             con.ConnectionString = "Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-DB;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#";
             SqlCommand insert = new SqlCommand("EXEC dbo.CreateNewEvent @Name, @Location, @Time, @Date, @Status, @Category", con);
             insert.Parameters.AddWithValue("@Name", ViewData["Name"]);
+            insert.Parameters.AddWithValue("@Location", ViewData["Location"]);
+            insert.Parameters.AddWithValue("@Time", ViewData["Time"]);
+            insert.Parameters.AddWithValue("@Date", ViewData["Date"]);
+            insert.Parameters.AddWithValue("@Status", "Planned");
+            insert.Parameters.AddWithValue("@Category", ViewData["Category"]);
 
         }
     }

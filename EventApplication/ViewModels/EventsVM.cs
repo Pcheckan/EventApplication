@@ -21,7 +21,6 @@ namespace EventApplication.ViewModels
         [DataType(DataType.Date)]
         public string Date { get; set; }
 
-        [Required]
         [DataType(DataType.Text)]
         public string Status { get; set; }
 
