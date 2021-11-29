@@ -124,10 +124,10 @@ namespace EventApplication.Controllers
         public IActionResult EventSearch()
         {
             con.ConnectionString = "Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-DB;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#";
-            searchData();
+            //searchData();
             return View(searchEvents);
         }
-
+        
         public IActionResult EventCreate()
         {
             return View();
