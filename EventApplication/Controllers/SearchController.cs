@@ -23,6 +23,8 @@ namespace EventApplication.Controllers
         {
             try
             {
+                con.ConnectionString = "Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-DB;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#";
+
                 con.Open();
                 command.Connection = con;
                 command.CommandText = "SELECT TOP (1000) [Name],[Location],[Time],[Date],[Status],[Category] FROM [dbo].[Events] WHERE Category ='" + Model.Category + "'";
@@ -60,7 +62,7 @@ namespace EventApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                //searchData();
+                searchData();
                 return View("SearchResults", searchEvents);
             }
             else

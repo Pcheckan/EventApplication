@@ -43,7 +43,7 @@ namespace EventApplication.Controllers
 
                 con.ConnectionString = "Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-DB;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#";
 
-                FetchData();
+                FetchData(data);
                 return View(events);
             }
             else
@@ -53,14 +53,14 @@ namespace EventApplication.Controllers
 
         }
 
-        private void FetchData()
+        private void FetchData(Users data)
         {
 
             try
             {
                 con.Open();
                 command.Connection = con;
-                command.CommandText = "SELECT TOP (1000) [Name],[Location],[Time],[Date],[Status],[Category] FROM [dbo].[Events]";
+                command.CommandText = $"SELECT TOP (1000) [Name],[Location],[Time],[Date],[Status],[Category] FROM [dbo].[Events] WHERE Category = '{data.Interest1}' OR Category = '{data.Interest2}' OR Category = '{data.Interest3}'";
                 dr = command.ExecuteReader();
                 while (dr.Read())
                 {

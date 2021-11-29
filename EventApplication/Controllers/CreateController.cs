@@ -12,7 +12,7 @@ namespace EventApplication.Controllers
         public EventsVM Model { get; set; }
         public void InsertNewEvent()
         {
-            SqlConnection conn = new SqlConnection("Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-database;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#");
+            SqlConnection conn = new SqlConnection("Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-DB;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#");
             {
                 SqlCommand insert = new SqlCommand("EXEC dbo.CreateNewEvent @Name, @Location, @Time, @Date, @Status, @Category", conn);
                 insert.Parameters.AddWithValue("@Name", Model.Name);
@@ -38,7 +38,20 @@ namespace EventApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                InsertNewEvent();
+                SqlConnection conn = new SqlConnection("Data Source=eventapplication-server.database.windows.net;Initial Catalog=eventapplication-DB;Persist Security Info=True;User ID=eventapplication-server-admin;Password=WebAppPassword!@#");
+                {
+                    SqlCommand insert = new SqlCommand("EXEC dbo.CreateNewEvent @Name, @Location, @Time, @Date, @Status, @Category", conn);
+                    insert.Parameters.AddWithValue("@Name", Response.Name);
+                    insert.Parameters.AddWithValue("@Location", Response.Location);
+                    insert.Parameters.AddWithValue("@Time", Response.Time);
+                    insert.Parameters.AddWithValue("@Date", Response.Date);
+                    insert.Parameters.AddWithValue("@Status", "Planned");
+                    insert.Parameters.AddWithValue("@Category", Response.Category);
+                    conn.Open();
+                    insert.ExecuteNonQuery();
+                    conn.Close();
+
+                }
                 return View("Thanks", Response);
             }
             else
@@ -46,7 +59,12 @@ namespace EventApplication.Controllers
                 return View();
             }
         }
+        public IActionResult Thanks()
+        {
+            return View();
+        }
     }
+
 
 
 }
