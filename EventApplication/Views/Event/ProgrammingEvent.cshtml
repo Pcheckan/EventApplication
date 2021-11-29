@@ -9,7 +9,24 @@
     <div class="row justify-content-left align-items-center">
         <div class="col-sm 12 col-md 12 col-lg-4">
             <h1 class="mb-3">Coding Practice</h1>
-             <img src="https://www.learnacademy.org/wp-content/uploads/2020/10/Practice-Makes-Perfect_-How-to-Hone-Your-Coding-Skills.jpg" />
+             <img src="https://www.learnacademy.org/wp-content/uploads/2020/10/Practice-Makes-Perfect_-How-to-Hone-Your-Coding-Skills.jpg" style="width:600px;height:400px;"/>
         </div>
     </div>
+
+    <h2>Upload and Share Images about this Event!</h2>
+    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+    <p><img id="output" width="200" /></p>
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+<!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%243lF84ovhAtVBBQHQ.1.V7."+"&opts=16798&num=10&ts=1638209065948");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
 </div>
