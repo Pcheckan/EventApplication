@@ -2648,3 +2648,5 @@ C:\Users\Ronny\source\repos\EventApplication\EventApplication\obj\Debug\net5.0\r
 C:\Users\Ronny\source\repos\EventApplication\EventApplication\obj\Debug\net5.0\EventApplication.pdb
 C:\Users\Ronny\source\repos\EventApplication\EventApplication\obj\Debug\net5.0\EventApplication.genruntimeconfig.cache
 >>>>>>> 5119974700d79b2a85b9996b3ff0d880d10d7964
+D:\WebApp\WebApp\EventApplication\obj\Debug\net5.0\Razor\Views\Search\Search.cshtml.g.cs
+D:\WebApp\WebApp\EventApplication\obj\Debug\net5.0\Razor\Views\Search\SearchResults.cshtml.g.cs

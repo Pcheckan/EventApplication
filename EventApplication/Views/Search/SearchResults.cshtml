@@ -1,0 +1,57 @@
+﻿@using EventApplication.ViewModels
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "SearchResults";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+        string[] TableHeaders = new string[]
+            {
+              "Name",
+              "Location",
+              "Time",
+              "Date",
+              "Status",
+              "Category"
+            };
+}
+
+<div class = "table row justify-content-center align-align-items-center ">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                @{
+                        foreach(var head in TableHeaders)
+                        {
+                            <th>
+                                @head
+                            </th>
+                        }
+                }
+            </tr>
+        </thead>
+    
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (var Data in Model)
+                    {
+                        <tr>    
+                            <td>@Data.Name</td>
+                            <td>@Data.Location</td>
+                            <td>@Data.Time</td>
+                            <td>@Data.Date</td>
+                            <td>@Data.Status</td>
+                            <td>@Data.Category</td>
+
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+        
+
+    </table>
+</div>

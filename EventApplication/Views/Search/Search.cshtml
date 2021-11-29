@@ -1,0 +1,35 @@
+﻿@model EventApplication.ViewModels.SearchVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm 12 col-md 12 col-lg-4">
+            <h1 class="mb-3">Search For Events</h1>
+
+            @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "", role = "form"}))
+            {
+                @Html.AntiForgeryToken()
+                 <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.Category">Category</label>
+                    <select id="Category" asp-for="@Model.Category" class="form-control">
+                        <option value="Air">Air Sports</option>
+                        <option value="Land">Outdoors</option>
+                        <option value="Sports">Team Sports</option>
+                        <option value="Exercise">Exercise</option>
+                        <option value="Snowsports">Snowsports</option>
+                        <option value="Relaxing">Relaxation</option>
+                        <option value="Motorsports">Motorsports</option>
+                        <option value="Watersports">WaterSports</option>
+                        <option value="Computers">Computers</option>
+                    </select> 
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
